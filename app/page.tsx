@@ -88,6 +88,9 @@ export default function Home() {
 
   return (
     <main className="overflow-hidden">
+      <a href="#home" className="skip-link">
+        Skip to main content
+      </a>
       {/* NAVBAR */}
       <header className="absolute left-0 right-0 top-0 z-50">
         <div className="container-spin">
@@ -561,3 +564,4 @@ export default function Home() {
     </main>
   );
 }
+
