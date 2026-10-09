@@ -137,17 +137,25 @@ export default function Home() {
             </div>
 
             <button
+              type="button"
               onClick={() => setMenuOpen(!menuOpen)}
-              className="relative z-50 rounded-full border border-white/20 p-3 text-white md:hidden"
-              aria-label="Toggle menu"
+              className="relative z-50 block rounded-full border-white/20 p-3 text-white transition hover:border-[#e31b23] md:hidden"
+              aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={menuOpen ? "true" : "false"}
+              aria-controls="mobile-navigation"
             >
+
               {menuOpen ? <X size={21} /> : <Menu size={21} />}
             </button>
           </nav>
         </div>
 
         {menuOpen && (
-          <div className="absolute left-0 right-0 top-0 min-h-screen bg-[#0b0b0d] px-5 pt-28 md:hidden">
+          <div
+            id="mobile-navigation"
+            className="absolute left-0 right-0 top-0 min-h-screen bg-[#0b0b0d] px-5 pt-28 md:hidden"
+            >
+              
             <div className="flex flex-col gap-7 text-2xl font-bold">
               <a href="#home" onClick={closeMenu}>
                 Home
@@ -527,7 +535,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <Clock3 size={17} className="mt-0.5 text-[#e31b23]" />
                   <span>
-                    Monday â€“ Saturday
+                    Monday – Saturday
                     <br />
                     Hours coming soon
                   </span>
@@ -545,7 +553,7 @@ export default function Home() {
           </div>
 
           <div className="mt-14 flex flex-col justify-between gap-4 border-t border-white/10 pt-7 text-xs text-white/35 sm:flex-row">
-            <p>Â© 2026 Spin-it Laundromat. All rights reserved.</p>
+            <p>© 2026 Spin-it Laundromat. All rights reserved.</p>
             <p>Fresh Clothes. Fresh Start.</p>
           </div>
         </div>
@@ -553,4 +561,3 @@ export default function Home() {
     </main>
   );
 }
-
