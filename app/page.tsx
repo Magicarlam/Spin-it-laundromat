@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import {
@@ -527,7 +527,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <Clock3 size={17} className="mt-0.5 text-[#e31b23]" />
                   <span>
-                    Monday – Saturday
+                    Monday â€“ Saturday
                     <br />
                     Hours coming soon
                   </span>
@@ -545,7 +545,7 @@ export default function Home() {
           </div>
 
           <div className="mt-14 flex flex-col justify-between gap-4 border-t border-white/10 pt-7 text-xs text-white/35 sm:flex-row">
-            <p>© 2026 Spin-it Laundromat. All rights reserved.</p>
+            <p>Â© 2026 Spin-it Laundromat. All rights reserved.</p>
             <p>Fresh Clothes. Fresh Start.</p>
           </div>
         </div>
@@ -553,3 +553,4 @@ export default function Home() {
     </main>
   );
 }
+
